@@ -1,0 +1,17 @@
+<h2 class="text-center">KC Weather Widget</h2>
+<div class="" style="text-align: center;">
+  <!--The search box, use ng change to populate data dynamically-->
+  <input type="text" class="inputStyle" ng-change="main.onSearch(main.city,main.type)" ng-model="main.city" placeholder="Type in the name of the city..."></input>
+
+  <!-- The select box to select number of days for which the weather data needs to be fetched -->
+  <select class="inputStyle select" ng-model="main.type" ng-change="main.onSearch(main.city,main.type)">
+    <option ng-value="current">Current</option>
+    <option ng-value="past">Past</option>
+  </select>
+
+  <!-- Submit button -->
+  <button ng-click="main.onSearch(main.city)">Search</button>
+</div>
+
+<!-- Create this directive to display weather data for a given day. Use your own styling, making it look good. -->
+<weather ng-repeat=""></weather>
